@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DaisyWorld Simulation</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+      #daisyWorldCanvas {
+        width: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="#home">Home</a>
+      <!-- <a href="#Model">Model</a> -->
+    </div>
+    <div class="header header-center">
+      <p>Daisy World</p>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <canvas class="canvas-container" id="daisyWorldCanvas"></canvas>
+        </div>
+        <div class="column">
+          <button class="button button-blue">Blue</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Footer</p>
+    </div>
+    <script src="js/CACanvas.js"></script>
+    <script>
+      const canvas = document.getElementById("daisyWorldCanvas");
+
+      function resizeCanvas() {
+        const size = Math.min(canvas.clientWidth, canvas.clientHeight);
+        canvas.width = size;
+        canvas.height = size;
+      }
+
+      // Call resizeCanvas on window resize
+      window.addEventListener("resize", resizeCanvas);
+      resizeCanvas(); // Initial call to set the size
+
+      const testCanvas = new CACanvas(10, (cSize = 80));
+      testCanvas.draw(5, 5, "black", true, "red");
+      testCanvas.update("daisyWorldCanvas");
+    </script>
+  </body>
+</html>

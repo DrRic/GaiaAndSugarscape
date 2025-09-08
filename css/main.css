@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #106fce;
+  --primary-hover: #0c7ce6;
+  --background-light: whitesmoke;
+  --background-hover: azure;
+  --text-color: black;
+}
+
+body, html {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.topnav {
+  background-color: var(--background-light);
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: var(--text-color);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.2s ease;
+}
+
+.topnav a:hover {
+  background-color: var(--background-hover);
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  padding: 10px;
+}
+
+.canvas-container {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Directly sets width:height ratio to 1:1 */
+  background-color: #f0f0f0;
+      display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.button {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 6px 16px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button-blue {
+  background-color: var(--primary-color);
+}
+
+.button-blue:hover {
+  background-color: var(--primary-hover);
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+  }
+}
